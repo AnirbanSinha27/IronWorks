@@ -17,7 +17,7 @@ export default function About() {
 
       <main>
         {/* Hero Section */}
-        <section className="relative h-96 flex items-center justify-center mt-20">
+        <section id="about" className="relative h-96 flex items-center justify-center mt-20">
           <Image 
             src="/gym-equipment.jpg" 
             alt="Gym Equipment"

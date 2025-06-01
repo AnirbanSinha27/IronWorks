@@ -52,7 +52,7 @@ export default function Membership() {
         <MembershipCards />
 
         {/* FAQ Section */}
-        <section className="py-20 bg-gray-950 text-white">
+        <section id='membership' className="py-20 bg-gray-950 text-white">
           <div className="container mx-auto px-4">
             <AnimatedWrapper>
               <h2 className="text-4xl font-bold font-heading text-center mb-4 text-white">

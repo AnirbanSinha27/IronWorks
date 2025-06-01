@@ -19,7 +19,7 @@ export default function Contact() {
         
         
         {/* Map Section - Reduced spacing */}
-        <section className="py-8 bg-gray-950">
+        <section id="contact" className="py-8 bg-gray-950">
           <div className="container mx-auto px-4">
             <AnimatedWrapper>
               <h2 className="text-3xl font-bold font-heading text-center mb-6 text-white">

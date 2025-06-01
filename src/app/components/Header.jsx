@@ -41,15 +41,16 @@ export const Header = () => {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8 items-center">
           {['Home', 'About', 'Memberships', 'Contact'].map((item, index) => (
-            <AnimatedWrapper key={item} delay={0.2 + index * 0.1}>
-              <Link 
-                href={`/${item.toLowerCase()}`} 
-                className="text-gray-300 hover:text-white transition-colors font-medium relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full"
-              >
-                {item}
-              </Link>
-            </AnimatedWrapper>
-          ))}
+  <AnimatedWrapper key={item} delay={0.2 + index * 0.1}>
+    <Link 
+      href={`/#${item.toLowerCase()}`} // <-- Add # and scroll target
+      className="text-gray-300 hover:text-white transition-colors font-medium relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full"
+    >
+      {item}
+    </Link>
+  </AnimatedWrapper>
+))}
+
           <AnimatedWrapper delay={0.5}>
             <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-full font-bold transition-all duration-300 hover:scale-105 ml-4 shadow-lg hover:shadow-red-500/30">
               JOIN NOW
@@ -80,15 +81,16 @@ export const Header = () => {
         <div className="md:hidden bg-gray-950 border-t border-gray-700">
           <nav className="flex flex-col space-y-2 p-4">
             {['Home', 'About', 'Memberships', 'Contact'].map((item) => (
-              <Link 
-                key={item}
-                href={`/${item.toLowerCase()}`} 
-                className="text-gray-300 hover:text-white transition-colors font-medium py-3 px-4 rounded hover:bg-gray-700"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                {item}
-              </Link>
-            ))}
+  <Link 
+    key={item}
+    href={`/#${item.toLowerCase()}`} // <-- Add # for scroll target
+    className="text-gray-300 hover:text-white transition-colors font-medium py-3 px-4 rounded hover:bg-gray-700"
+    onClick={() => setMobileMenuOpen(false)}
+  >
+    {item}
+  </Link>
+))}
+
             <button className="bg-red-600 hover:bg-red-800 text-white px-6 py-3 rounded-full font-bold transition-all duration-300 w-full mt-2 hover:scale-105">
               JOIN NOW
             </button>

@@ -32,7 +32,7 @@ useEffect(() => {
   }
 
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Image Carousel */}
       <div className="absolute inset-0">
         {images.map((src, index) => (
